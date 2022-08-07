@@ -1,0 +1,47 @@
+.section {
+  &__container {
+    padding: 32px 0;
+  }
+
+  &__header {
+    text-align: center;
+    color: $black;
+
+    &::after {
+      content: '';
+      position: relative;
+      width: 80px;
+      height: 2px;
+      background: $red;
+      display: block;
+      margin: 41px auto 41px auto;
+    }
+
+    p {
+      @extend .text--italic;
+      font-size: 24px;
+    }
+
+    h2 {
+      @extend .text--bold;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__content {
+    @extend .text--roboto;
+    text-align: center;
+    color: $gray;
+    font-size: 12px;
+
+    &--team {
+      @extend .section__content;
+
+      p {
+        padding: 0 64px;
+        margin-bottom: 64px;
+      }
+    }
+  }
+}

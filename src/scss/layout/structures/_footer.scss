@@ -1,0 +1,22 @@
+.footer {
+  &__container {
+    padding: 8px 0;
+    border-top: 1px solid $gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    a {
+      color: $red;
+      text-decoration: none;
+    }
+
+    p {
+      @extend .text--bold;
+      font-size: 14px;
+    }
+  }
+}

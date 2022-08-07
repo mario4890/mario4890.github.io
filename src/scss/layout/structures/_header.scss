@@ -1,0 +1,63 @@
+.header {
+  &__container {
+      display:inline-block;
+      background: -moz-linear-gradient(top, rgba($red,.6) 0%, rgba($yellow,0.65) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba($yellow,0.65)), color-stop(100%,rgba($red,.6))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, rgba($red,.6) 0%,rgba(2551650,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, rgba($red,.6) 0%,rgba($yellow,0.65) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, rgba($red,.6) 0%,rgba($yellow,0.65) 100%); /* IE10+ */
+      background: linear-gradient(to bottom, rgba($red,.6) 0%,rgba($yellow,0.65) 100%); /* W3C */
+      position: relative;
+  }
+
+  &__top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: $white;
+    padding: 16px 0;
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    button {
+      margin-top: 52px;
+    }
+
+    p {
+      color: $white;
+
+      &:nth-of-type(1) {
+        @extend .text--italic;
+        font-size: 60px;
+      }
+      &:nth-of-type(2) {
+        @extend .text--bold;
+        font-size: 100px;
+      }
+    }
+  }
+
+  img {
+    position:relative;
+    z-index:-1;
+    display:block;
+    width: 100%;
+  }
+}

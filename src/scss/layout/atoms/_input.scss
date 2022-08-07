@@ -1,0 +1,27 @@
+.input {
+  &__form {
+    display: flex;
+
+    input {
+      padding: 8px 4px;
+      border: 1px solid $gray;
+      border-right: none;
+
+      &::placeholder {
+        color: $gray;
+        font-style: italic;
+      }
+    }
+
+    button {
+      @extend .text--bold;
+      padding: 8px 32px;
+      margin: 0;
+      border: 1px solid $blue;
+      background: $blue;
+      text-transform: uppercase;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}
